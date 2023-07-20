@@ -50,6 +50,10 @@
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnFollowing = new System.Windows.Forms.Button();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.txtUser_Name = new System.Windows.Forms.TextBox();
+            this.btnUnFollow = new System.Windows.Forms.Button();
+            this.btnUserFollow = new System.Windows.Forms.Button();
             this.gbLogin.SuspendLayout();
             this.gbCommand.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -58,6 +62,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgbFollowers)).BeginInit();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgbFollowing)).BeginInit();
+            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // gbLogin
@@ -123,9 +128,9 @@
             // 
             this.gbCommand.Controls.Add(this.btnEditProfile);
             this.gbCommand.Enabled = false;
-            this.gbCommand.Location = new System.Drawing.Point(279, 13);
+            this.gbCommand.Location = new System.Drawing.Point(512, 13);
             this.gbCommand.Name = "gbCommand";
-            this.gbCommand.Size = new System.Drawing.Size(579, 238);
+            this.gbCommand.Size = new System.Drawing.Size(583, 238);
             this.gbCommand.TabIndex = 1;
             this.gbCommand.TabStop = false;
             this.gbCommand.Text = " دستورات :";
@@ -287,11 +292,51 @@
             this.btnFollowing.UseVisualStyleBackColor = true;
             this.btnFollowing.Click += new System.EventHandler(this.btnFollowing_Click);
             // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.btnUserFollow);
+            this.groupBox4.Controls.Add(this.btnUnFollow);
+            this.groupBox4.Controls.Add(this.txtUser_Name);
+            this.groupBox4.Location = new System.Drawing.Point(279, 13);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(227, 238);
+            this.groupBox4.TabIndex = 11;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "مدیریت کاربران پیچ :";
+            // 
+            // txtUser_Name
+            // 
+            this.txtUser_Name.Location = new System.Drawing.Point(6, 68);
+            this.txtUser_Name.Name = "txtUser_Name";
+            this.txtUser_Name.Size = new System.Drawing.Size(194, 28);
+            this.txtUser_Name.TabIndex = 2;
+            // 
+            // btnUnFollow
+            // 
+            this.btnUnFollow.Location = new System.Drawing.Point(19, 107);
+            this.btnUnFollow.Name = "btnUnFollow";
+            this.btnUnFollow.Size = new System.Drawing.Size(75, 38);
+            this.btnUnFollow.TabIndex = 3;
+            this.btnUnFollow.Text = "UnFollow";
+            this.btnUnFollow.UseVisualStyleBackColor = true;
+            this.btnUnFollow.Click += new System.EventHandler(this.btnUnFollow_Click);
+            // 
+            // btnUserFollow
+            // 
+            this.btnUserFollow.Location = new System.Drawing.Point(115, 107);
+            this.btnUserFollow.Name = "btnUserFollow";
+            this.btnUserFollow.Size = new System.Drawing.Size(75, 38);
+            this.btnUserFollow.TabIndex = 4;
+            this.btnUserFollow.Text = "Follow";
+            this.btnUserFollow.UseVisualStyleBackColor = true;
+            this.btnUserFollow.Click += new System.EventHandler(this.btnUserFollow_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(870, 737);
+            this.ClientSize = new System.Drawing.Size(1107, 737);
+            this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.btnDeletePic);
@@ -314,6 +359,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgbFollowers)).EndInit();
             this.groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgbFollowing)).EndInit();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -342,6 +389,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.Button btnFollowing;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.Button btnUserFollow;
+        private System.Windows.Forms.Button btnUnFollow;
+        private System.Windows.Forms.TextBox txtUser_Name;
     }
 }
 

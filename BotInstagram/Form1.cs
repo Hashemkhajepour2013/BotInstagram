@@ -95,5 +95,27 @@ Ctx.api.AccountProcessor.ChangeProfilePictureAsync(picByte);
                 dgbFollowing.Rows.Add(follower.UserName, follower.FullName);
             }
         }
+
+        private async void btnUserFollow_Click(object sender, System.EventArgs e)
+        {
+            var user = await Ctx.api.UserProcessor.GetUserAsync(txtUser_Name.Text);
+            var follow = await Ctx.api.UserProcessor.FollowUserAsync
+                (user.Value.Pk);
+            if (follow.Succeeded)
+            {
+                btnFollowing.PerformClick();
+            }
+        }
+
+        private async void btnUnFollow_Click(object sender, System.EventArgs e)
+        {
+            var user = await Ctx.api.UserProcessor.GetUserAsync(txtUser_Name.Text);
+            var unFollow = await Ctx.api.UserProcessor.UnFollowUserAsync
+                (user.Value.Pk);
+            if (unFollow.Succeeded)
+            {
+                btnFollowing.PerformClick();
+            }
+        }
     }
 }
