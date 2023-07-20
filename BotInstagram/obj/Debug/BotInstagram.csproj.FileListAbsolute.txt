@@ -1,0 +1,17 @@
+C:\Users\hashem\Desktop\BotInstagram\BotInstagram\bin\Debug\BotInstagram.exe.config
+C:\Users\hashem\Desktop\BotInstagram\BotInstagram\bin\Debug\BotInstagram.exe
+C:\Users\hashem\Desktop\BotInstagram\BotInstagram\bin\Debug\BotInstagram.pdb
+C:\Users\hashem\Desktop\BotInstagram\BotInstagram\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\hashem\Desktop\BotInstagram\BotInstagram\bin\Debug\InstagramApiSharp.dll
+C:\Users\hashem\Desktop\BotInstagram\BotInstagram\bin\Debug\Newtonsoft.Json.dll
+C:\Users\hashem\Desktop\BotInstagram\BotInstagram\bin\Debug\BouncyCastle.Crypto.xml
+C:\Users\hashem\Desktop\BotInstagram\BotInstagram\bin\Debug\Newtonsoft.Json.xml
+C:\Users\hashem\Desktop\BotInstagram\BotInstagram\obj\Debug\BotInstagram.csproj.AssemblyReference.cache
+C:\Users\hashem\Desktop\BotInstagram\BotInstagram\obj\Debug\BotInstagram.csproj.SuggestedBindingRedirects.cache
+C:\Users\hashem\Desktop\BotInstagram\BotInstagram\obj\Debug\BotInstagram.frmMain.resources
+C:\Users\hashem\Desktop\BotInstagram\BotInstagram\obj\Debug\BotInstagram.Properties.Resources.resources
+C:\Users\hashem\Desktop\BotInstagram\BotInstagram\obj\Debug\BotInstagram.csproj.GenerateResource.cache
+C:\Users\hashem\Desktop\BotInstagram\BotInstagram\obj\Debug\BotInstagram.csproj.CoreCompileInputs.cache
+C:\Users\hashem\Desktop\BotInstagram\BotInstagram\obj\Debug\BotInstagram.csproj.CopyComplete
+C:\Users\hashem\Desktop\BotInstagram\BotInstagram\obj\Debug\BotInstagram.exe
+C:\Users\hashem\Desktop\BotInstagram\BotInstagram\obj\Debug\BotInstagram.pdb
