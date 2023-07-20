@@ -9,7 +9,6 @@ namespace BotInstagram
     public partial class frmMain : Form
     {
         private static UserSessionData user;
-        private static IInstaApi api;
 
         public frmMain()
         {
@@ -22,13 +21,13 @@ namespace BotInstagram
             user.UserName = txtUserName.Text;
             user.Password = txtPassword.Text;
 
-            api = InstaApiBuilder.CreateBuilder()
+            Ctx.api = InstaApiBuilder.CreateBuilder()
                 .SetUser(user)
                 .UseLogger(new DebugLogger(LogLevel.All))
                 .SetRequestDelay(RequestDelay.FromSeconds(0, 1))
                 .Build();
 
-            var loginRequest = await api.LoginAsync();
+            var loginRequest = await Ctx.api.LoginAsync();
 
             if(loginRequest.Succeeded)
             {
@@ -40,6 +39,11 @@ namespace BotInstagram
                 MessageBox.Show("Login Field .... \n" + 
                     loginRequest.Info.Message);
             }
+        }
+
+        private void btnEditProfile_Click(object sender, System.EventArgs e)
+        {
+            (new frmEditProfile()).ShowDialog();
         }
     }
 }

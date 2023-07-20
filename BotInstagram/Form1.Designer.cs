@@ -29,13 +29,15 @@
         private void InitializeComponent()
         {
             this.gbLogin = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.btnLogin = new System.Windows.Forms.Button();
+            this.txtPassword = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtUserName = new System.Windows.Forms.TextBox();
-            this.txtPassword = new System.Windows.Forms.TextBox();
-            this.btnLogin = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.gbCommand = new System.Windows.Forms.GroupBox();
+            this.btnEditProfile = new System.Windows.Forms.Button();
             this.gbLogin.SuspendLayout();
+            this.gbCommand.SuspendLayout();
             this.SuspendLayout();
             // 
             // gbLogin
@@ -54,14 +56,23 @@
             this.gbLogin.TabStop = false;
             this.gbLogin.Text = "حساب کاربری :";
             // 
-            // label1
+            // btnLogin
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(131, 44);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(126, 21);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Username or Email :";
+            this.btnLogin.Location = new System.Drawing.Point(19, 192);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(75, 38);
+            this.btnLogin.TabIndex = 1;
+            this.btnLogin.Text = "Login";
+            this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            // 
+            // txtPassword
+            // 
+            this.txtPassword.Location = new System.Drawing.Point(19, 141);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '*';
+            this.txtPassword.Size = new System.Drawing.Size(234, 28);
+            this.txtPassword.TabIndex = 3;
             // 
             // label2
             // 
@@ -79,33 +90,35 @@
             this.txtUserName.Size = new System.Drawing.Size(234, 28);
             this.txtUserName.TabIndex = 1;
             // 
-            // txtPassword
+            // label1
             // 
-            this.txtPassword.Location = new System.Drawing.Point(19, 141);
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(234, 28);
-            this.txtPassword.TabIndex = 3;
-            // 
-            // btnLogin
-            // 
-            this.btnLogin.Location = new System.Drawing.Point(19, 192);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(75, 38);
-            this.btnLogin.TabIndex = 1;
-            this.btnLogin.Text = "Login";
-            this.btnLogin.UseVisualStyleBackColor = true;
-            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(131, 44);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(126, 21);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Username or Email :";
             // 
             // gbCommand
             // 
+            this.gbCommand.Controls.Add(this.btnEditProfile);
             this.gbCommand.Enabled = false;
             this.gbCommand.Location = new System.Drawing.Point(279, 13);
             this.gbCommand.Name = "gbCommand";
-            this.gbCommand.Size = new System.Drawing.Size(579, 169);
+            this.gbCommand.Size = new System.Drawing.Size(579, 238);
             this.gbCommand.TabIndex = 1;
             this.gbCommand.TabStop = false;
             this.gbCommand.Text = " دستورات :";
+            // 
+            // btnEditProfile
+            // 
+            this.btnEditProfile.Location = new System.Drawing.Point(438, 27);
+            this.btnEditProfile.Name = "btnEditProfile";
+            this.btnEditProfile.Size = new System.Drawing.Size(123, 38);
+            this.btnEditProfile.TabIndex = 4;
+            this.btnEditProfile.Text = "ویرایش پروفایل";
+            this.btnEditProfile.UseVisualStyleBackColor = true;
+            this.btnEditProfile.Click += new System.EventHandler(this.btnEditProfile_Click);
             // 
             // frmMain
             // 
@@ -122,6 +135,7 @@
             this.Text = "ربات هوشمند";
             this.gbLogin.ResumeLayout(false);
             this.gbLogin.PerformLayout();
+            this.gbCommand.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -135,6 +149,7 @@
         private System.Windows.Forms.TextBox txtUserName;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox gbCommand;
+        private System.Windows.Forms.Button btnEditProfile;
     }
 }
 
