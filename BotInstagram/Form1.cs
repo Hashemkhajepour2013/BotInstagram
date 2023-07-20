@@ -1,4 +1,5 @@
-﻿using InstagramApiSharp.API;
+﻿using InstagramApiSharp;
+using InstagramApiSharp.API;
 using InstagramApiSharp.API.Builder;
 using InstagramApiSharp.Classes;
 using InstagramApiSharp.Logger;
@@ -69,6 +70,29 @@ Ctx.api.AccountProcessor.ChangeProfilePictureAsync(picByte);
                 {
                     pcImage.ImageLocation = op.FileName; 
                 }
+            }
+        }
+
+        private async void btnFollowers_Click(object sender, System.EventArgs e)
+        {
+            var followers = await Ctx.api.UserProcessor
+                .GetCurrentUserFollowersAsync(PaginationParameters.MaxPagesToLoad(1));
+            foreach(var follower in followers.Value)
+            {
+                dgbFollowers.Rows.Add(follower.UserName, follower.FullName);
+            }
+        }
+
+        private async void btnFollowing_Click(object sender, System.EventArgs e)
+        {
+            var currentUserName = await Ctx.api.UserProcessor.GetCurrentUserAsync();
+            var followings = await Ctx.api.UserProcessor
+               .GetUserFollowingAsync(
+                currentUserName.Value.UserName,
+                PaginationParameters.MaxPagesToLoad(1));
+            foreach (var follower in followings.Value)
+            {
+                dgbFollowing.Rows.Add(follower.UserName, follower.FullName);
             }
         }
     }

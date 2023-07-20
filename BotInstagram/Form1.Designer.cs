@@ -40,10 +40,24 @@
             this.pcImage = new System.Windows.Forms.PictureBox();
             this.btnEditPic = new System.Windows.Forms.Button();
             this.btnDeletePic = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnFollowers = new System.Windows.Forms.Button();
+            this.dgbFollowers = new System.Windows.Forms.DataGridView();
+            this.UserName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FullName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.dgbFollowing = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnFollowing = new System.Windows.Forms.Button();
             this.gbLogin.SuspendLayout();
             this.gbCommand.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcImage)).BeginInit();
+            this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgbFollowers)).BeginInit();
+            this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgbFollowing)).BeginInit();
             this.SuspendLayout();
             // 
             // gbLogin
@@ -165,11 +179,121 @@
             this.btnDeletePic.UseVisualStyleBackColor = true;
             this.btnDeletePic.Click += new System.EventHandler(this.btnDeletePic_Click);
             // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.dgbFollowers);
+            this.groupBox2.Controls.Add(this.btnFollowers);
+            this.groupBox2.Location = new System.Drawing.Point(12, 269);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(200, 456);
+            this.groupBox2.TabIndex = 7;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "دنبال کننده ها :";
+            // 
+            // btnFollowers
+            // 
+            this.btnFollowers.Location = new System.Drawing.Point(6, 412);
+            this.btnFollowers.Name = "btnFollowers";
+            this.btnFollowers.Size = new System.Drawing.Size(75, 38);
+            this.btnFollowers.TabIndex = 9;
+            this.btnFollowers.Text = "نمایش";
+            this.btnFollowers.UseVisualStyleBackColor = true;
+            this.btnFollowers.Click += new System.EventHandler(this.btnFollowers_Click);
+            // 
+            // dgbFollowers
+            // 
+            this.dgbFollowers.AllowUserToAddRows = false;
+            this.dgbFollowers.AllowUserToDeleteRows = false;
+            this.dgbFollowers.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
+            this.dgbFollowers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgbFollowers.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.UserName,
+            this.FullName});
+            this.dgbFollowers.Location = new System.Drawing.Point(6, 33);
+            this.dgbFollowers.Name = "dgbFollowers";
+            this.dgbFollowers.ReadOnly = true;
+            this.dgbFollowers.RowHeadersWidth = 51;
+            this.dgbFollowers.RowTemplate.Height = 24;
+            this.dgbFollowers.Size = new System.Drawing.Size(188, 373);
+            this.dgbFollowers.TabIndex = 8;
+            // 
+            // UserName
+            // 
+            this.UserName.HeaderText = "نام کاربری";
+            this.UserName.MinimumWidth = 6;
+            this.UserName.Name = "UserName";
+            this.UserName.ReadOnly = true;
+            this.UserName.Width = 94;
+            // 
+            // FullName
+            // 
+            this.FullName.HeaderText = "نام";
+            this.FullName.MinimumWidth = 6;
+            this.FullName.Name = "FullName";
+            this.FullName.ReadOnly = true;
+            this.FullName.Width = 55;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.dgbFollowing);
+            this.groupBox3.Controls.Add(this.btnFollowing);
+            this.groupBox3.Location = new System.Drawing.Point(238, 269);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(200, 456);
+            this.groupBox3.TabIndex = 10;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "دنبال شونده ها :";
+            // 
+            // dgbFollowing
+            // 
+            this.dgbFollowing.AllowUserToAddRows = false;
+            this.dgbFollowing.AllowUserToDeleteRows = false;
+            this.dgbFollowing.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
+            this.dgbFollowing.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgbFollowing.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4});
+            this.dgbFollowing.Location = new System.Drawing.Point(6, 33);
+            this.dgbFollowing.Name = "dgbFollowing";
+            this.dgbFollowing.ReadOnly = true;
+            this.dgbFollowing.RowHeadersWidth = 51;
+            this.dgbFollowing.RowTemplate.Height = 24;
+            this.dgbFollowing.Size = new System.Drawing.Size(188, 373);
+            this.dgbFollowing.TabIndex = 8;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.HeaderText = "نام کاربری";
+            this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.dataGridViewTextBoxColumn3.Width = 94;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.HeaderText = "نام";
+            this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            this.dataGridViewTextBoxColumn4.Width = 55;
+            // 
+            // btnFollowing
+            // 
+            this.btnFollowing.Location = new System.Drawing.Point(6, 412);
+            this.btnFollowing.Name = "btnFollowing";
+            this.btnFollowing.Size = new System.Drawing.Size(75, 38);
+            this.btnFollowing.TabIndex = 9;
+            this.btnFollowing.Text = "نمایش";
+            this.btnFollowing.UseVisualStyleBackColor = true;
+            this.btnFollowing.Click += new System.EventHandler(this.btnFollowing_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(870, 737);
+            this.Controls.Add(this.groupBox3);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.btnDeletePic);
             this.Controls.Add(this.btnEditPic);
             this.Controls.Add(this.groupBox1);
@@ -186,6 +310,10 @@
             this.gbCommand.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pcImage)).EndInit();
+            this.groupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgbFollowers)).EndInit();
+            this.groupBox3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgbFollowing)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -204,6 +332,16 @@
         private System.Windows.Forms.PictureBox pcImage;
         private System.Windows.Forms.Button btnEditPic;
         private System.Windows.Forms.Button btnDeletePic;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Button btnFollowers;
+        private System.Windows.Forms.DataGridView dgbFollowers;
+        private System.Windows.Forms.DataGridViewTextBoxColumn UserName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FullName;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.DataGridView dgbFollowing;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.Button btnFollowing;
     }
 }
 
