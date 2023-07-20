@@ -36,8 +36,14 @@
             this.label1 = new System.Windows.Forms.Label();
             this.gbCommand = new System.Windows.Forms.GroupBox();
             this.btnEditProfile = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.pcImage = new System.Windows.Forms.PictureBox();
+            this.btnEditPic = new System.Windows.Forms.Button();
+            this.btnDeletePic = new System.Windows.Forms.Button();
             this.gbLogin.SuspendLayout();
             this.gbCommand.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pcImage)).BeginInit();
             this.SuspendLayout();
             // 
             // gbLogin
@@ -58,7 +64,7 @@
             // 
             // btnLogin
             // 
-            this.btnLogin.Location = new System.Drawing.Point(19, 192);
+            this.btnLogin.Location = new System.Drawing.Point(19, 193);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(75, 38);
             this.btnLogin.TabIndex = 1;
@@ -120,11 +126,53 @@
             this.btnEditProfile.UseVisualStyleBackColor = true;
             this.btnEditProfile.Click += new System.EventHandler(this.btnEditProfile_Click);
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.pcImage);
+            this.groupBox1.Location = new System.Drawing.Point(619, 269);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(239, 143);
+            this.groupBox1.TabIndex = 5;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "تصویر پروفایل :";
+            // 
+            // pcImage
+            // 
+            this.pcImage.Location = new System.Drawing.Point(6, 27);
+            this.pcImage.Name = "pcImage";
+            this.pcImage.Size = new System.Drawing.Size(227, 110);
+            this.pcImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pcImage.TabIndex = 0;
+            this.pcImage.TabStop = false;
+            // 
+            // btnEditPic
+            // 
+            this.btnEditPic.Location = new System.Drawing.Point(777, 418);
+            this.btnEditPic.Name = "btnEditPic";
+            this.btnEditPic.Size = new System.Drawing.Size(75, 38);
+            this.btnEditPic.TabIndex = 2;
+            this.btnEditPic.Text = "ویرایش";
+            this.btnEditPic.UseVisualStyleBackColor = true;
+            this.btnEditPic.Click += new System.EventHandler(this.btnEditPic_Click);
+            // 
+            // btnDeletePic
+            // 
+            this.btnDeletePic.Location = new System.Drawing.Point(625, 418);
+            this.btnDeletePic.Name = "btnDeletePic";
+            this.btnDeletePic.Size = new System.Drawing.Size(146, 38);
+            this.btnDeletePic.TabIndex = 6;
+            this.btnDeletePic.Text = "حذف تصویر";
+            this.btnDeletePic.UseVisualStyleBackColor = true;
+            this.btnDeletePic.Click += new System.EventHandler(this.btnDeletePic_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(870, 737);
+            this.Controls.Add(this.btnDeletePic);
+            this.Controls.Add(this.btnEditPic);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.gbCommand);
             this.Controls.Add(this.gbLogin);
             this.Font = new System.Drawing.Font("Vazir", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -136,6 +184,8 @@
             this.gbLogin.ResumeLayout(false);
             this.gbLogin.PerformLayout();
             this.gbCommand.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pcImage)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -150,6 +200,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox gbCommand;
         private System.Windows.Forms.Button btnEditProfile;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.PictureBox pcImage;
+        private System.Windows.Forms.Button btnEditPic;
+        private System.Windows.Forms.Button btnDeletePic;
     }
 }
 

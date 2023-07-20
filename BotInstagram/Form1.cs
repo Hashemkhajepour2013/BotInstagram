@@ -2,6 +2,7 @@
 using InstagramApiSharp.API.Builder;
 using InstagramApiSharp.Classes;
 using InstagramApiSharp.Logger;
+using System.IO;
 using System.Windows.Forms;
 
 namespace BotInstagram
@@ -33,6 +34,7 @@ namespace BotInstagram
             {
                 gbLogin.Enabled = false;
                 gbCommand.Enabled = true;
+                pcImage.Load(Ctx.api.GetLoggedUser().LoggedInUser.ProfilePicUrl);
             }
             else
             {
@@ -44,6 +46,30 @@ namespace BotInstagram
         private void btnEditProfile_Click(object sender, System.EventArgs e)
         {
             (new frmEditProfile()).ShowDialog();
+        }
+
+        private async void btnDeletePic_Click(object sender, System.EventArgs e)
+        {
+            var result = await Ctx.api.AccountProcessor.RemoveProfilePictureAsync();
+            if(result.Succeeded)
+            {
+                pcImage.Image = null;
+            }
+        }
+
+        private async void btnEditPic_Click(object sender, System.EventArgs e)
+        {
+            OpenFileDialog op = new OpenFileDialog();
+            if(op.ShowDialog() == DialogResult.OK)
+            {
+                var picByte = File.ReadAllBytes(op.FileName);
+                var result =  await
+Ctx.api.AccountProcessor.ChangeProfilePictureAsync(picByte);
+                if (result.Succeeded)
+                {
+                    pcImage.ImageLocation = op.FileName; 
+                }
+            }
         }
     }
 }

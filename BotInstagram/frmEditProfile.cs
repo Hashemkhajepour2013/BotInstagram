@@ -26,6 +26,8 @@ namespace BotInstagram
                 txtUserName.Text = editProfile.Value.Username;
                 if (editProfile.Value.Gender == InstaGenderType.Male)
                     rbMale.Checked = true;
+                    rbMale.Checked = true;
+                    rbMale.Checked = true;
                 else
                 {
                     rbFemale.Checked = true;
