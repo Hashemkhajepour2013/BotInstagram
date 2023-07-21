@@ -226,5 +226,48 @@ Ctx.api.AccountProcessor.ChangeProfilePictureAsync(picByte);
 
             frm.ShowDialog();
         }
+
+        private async void btnStoryPhoto_Click(object sender, System.EventArgs e)
+        {
+            OpenFileDialog op = new OpenFileDialog();
+            if(op.ShowDialog() == DialogResult.OK)
+            {
+                var image = new InstaImage()
+                {
+                    Uri = op.FileName
+                };
+                var result = await Ctx.api
+                   .StoryProcessor.UploadStoryPhotoAsync(
+                    image, "Hashem");
+                if (result.Succeeded)
+                {
+                    MessageBox.Show("Photo Sended ..."); 
+                }
+            }
+        }
+
+        private async void btnStoryVideo_Click(object sender, System.EventArgs e)
+        {
+           OpenFileDialog op = new OpenFileDialog();
+            op.Title = "selectVideo";
+            op.ShowDialog();
+            string videoUri = op.FileName;
+            OpenFileDialog opImage = new OpenFileDialog();
+            opImage.ShowDialog();
+            string imageUri = opImage.FileName;
+            var video = new InstaVideoUpload()
+            {
+                Video = new InstaVideo(videoUri, 0, 0),
+                VideoThumbnail = new InstaImage(imageUri, 0, 0)
+            };
+            var res = await Ctx.api
+                .StoryProcessor.UploadStoryVideoAsync(
+                video, "Hashem");
+
+            if (res.Succeeded)
+            {
+                MessageBox.Show("video sended ...");
+            }
+        }
     }
 }
