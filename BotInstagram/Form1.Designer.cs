@@ -75,6 +75,10 @@
             this.btnStoryPhoto = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.btnStoryVideo = new System.Windows.Forms.Button();
+            this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.btnSendVideoPost = new System.Windows.Forms.Button();
+            this.btnSendImagePost = new System.Windows.Forms.Button();
+            this.txtCaption = new System.Windows.Forms.TextBox();
             this.gbLogin.SuspendLayout();
             this.gbCommand.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -88,6 +92,7 @@
             this.groupBox6.SuspendLayout();
             this.groupBox7.SuspendLayout();
             this.groupBox8.SuspendLayout();
+            this.groupBox9.SuspendLayout();
             this.SuspendLayout();
             // 
             // gbLogin
@@ -184,9 +189,9 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.pcImage);
-            this.groupBox1.Location = new System.Drawing.Point(856, 269);
+            this.groupBox1.Location = new System.Drawing.Point(780, 269);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(239, 143);
+            this.groupBox1.Size = new System.Drawing.Size(315, 143);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "تصویر پروفایل :";
@@ -202,7 +207,7 @@
             // 
             // btnEditPic
             // 
-            this.btnEditPic.Location = new System.Drawing.Point(1014, 427);
+            this.btnEditPic.Location = new System.Drawing.Point(987, 458);
             this.btnEditPic.Name = "btnEditPic";
             this.btnEditPic.Size = new System.Drawing.Size(75, 38);
             this.btnEditPic.TabIndex = 2;
@@ -212,7 +217,7 @@
             // 
             // btnDeletePic
             // 
-            this.btnDeletePic.Location = new System.Drawing.Point(862, 427);
+            this.btnDeletePic.Location = new System.Drawing.Point(824, 458);
             this.btnDeletePic.Name = "btnDeletePic";
             this.btnDeletePic.Size = new System.Drawing.Size(146, 38);
             this.btnDeletePic.TabIndex = 6;
@@ -226,7 +231,7 @@
             this.groupBox2.Controls.Add(this.btnFollowers);
             this.groupBox2.Location = new System.Drawing.Point(12, 269);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(200, 456);
+            this.groupBox2.Size = new System.Drawing.Size(200, 642);
             this.groupBox2.TabIndex = 7;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "دنبال کننده ها :";
@@ -245,7 +250,7 @@
             this.dgbFollowers.ReadOnly = true;
             this.dgbFollowers.RowHeadersWidth = 51;
             this.dgbFollowers.RowTemplate.Height = 24;
-            this.dgbFollowers.Size = new System.Drawing.Size(188, 373);
+            this.dgbFollowers.Size = new System.Drawing.Size(188, 549);
             this.dgbFollowers.TabIndex = 8;
             // 
             // UserName
@@ -266,7 +271,7 @@
             // 
             // btnFollowers
             // 
-            this.btnFollowers.Location = new System.Drawing.Point(6, 412);
+            this.btnFollowers.Location = new System.Drawing.Point(6, 598);
             this.btnFollowers.Name = "btnFollowers";
             this.btnFollowers.Size = new System.Drawing.Size(75, 38);
             this.btnFollowers.TabIndex = 9;
@@ -280,7 +285,7 @@
             this.groupBox3.Controls.Add(this.btnFollowing);
             this.groupBox3.Location = new System.Drawing.Point(238, 269);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(200, 456);
+            this.groupBox3.Size = new System.Drawing.Size(200, 648);
             this.groupBox3.TabIndex = 10;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "دنبال شونده ها :";
@@ -299,7 +304,7 @@
             this.dgbFollowing.ReadOnly = true;
             this.dgbFollowing.RowHeadersWidth = 51;
             this.dgbFollowing.RowTemplate.Height = 24;
-            this.dgbFollowing.Size = new System.Drawing.Size(188, 373);
+            this.dgbFollowing.Size = new System.Drawing.Size(188, 549);
             this.dgbFollowing.TabIndex = 8;
             // 
             // dataGridViewTextBoxColumn3
@@ -320,7 +325,7 @@
             // 
             // btnFollowing
             // 
-            this.btnFollowing.Location = new System.Drawing.Point(6, 412);
+            this.btnFollowing.Location = new System.Drawing.Point(6, 604);
             this.btnFollowing.Name = "btnFollowing";
             this.btnFollowing.Size = new System.Drawing.Size(75, 38);
             this.btnFollowing.TabIndex = 9;
@@ -403,16 +408,16 @@
             // 
             this.groupBox5.Controls.Add(this.btnBlockedUser);
             this.groupBox5.Controls.Add(this.lsbBlockUser);
-            this.groupBox5.Location = new System.Drawing.Point(461, 269);
+            this.groupBox5.Location = new System.Drawing.Point(472, 269);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(208, 456);
+            this.groupBox5.Size = new System.Drawing.Size(282, 236);
             this.groupBox5.TabIndex = 12;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "نمایش کاربران بلاک شده :";
             // 
             // btnBlockedUser
             // 
-            this.btnBlockedUser.Location = new System.Drawing.Point(6, 418);
+            this.btnBlockedUser.Location = new System.Drawing.Point(6, 189);
             this.btnBlockedUser.Name = "btnBlockedUser";
             this.btnBlockedUser.Size = new System.Drawing.Size(75, 38);
             this.btnBlockedUser.TabIndex = 10;
@@ -424,9 +429,9 @@
             // 
             this.lsbBlockUser.FormattingEnabled = true;
             this.lsbBlockUser.ItemHeight = 21;
-            this.lsbBlockUser.Location = new System.Drawing.Point(6, 27);
+            this.lsbBlockUser.Location = new System.Drawing.Point(6, 32);
             this.lsbBlockUser.Name = "lsbBlockUser";
-            this.lsbBlockUser.Size = new System.Drawing.Size(189, 382);
+            this.lsbBlockUser.Size = new System.Drawing.Size(264, 151);
             this.lsbBlockUser.TabIndex = 0;
             this.lsbBlockUser.SelectedIndexChanged += new System.EventHandler(this.lsbBlockUser_SelectedIndexChanged);
             // 
@@ -438,18 +443,18 @@
             this.groupBox6.Controls.Add(this.txtMessage);
             this.groupBox6.Controls.Add(this.txtDirectUserName);
             this.groupBox6.Controls.Add(this.label4);
-            this.groupBox6.Location = new System.Drawing.Point(700, 506);
+            this.groupBox6.Location = new System.Drawing.Point(444, 511);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(389, 219);
+            this.groupBox6.Size = new System.Drawing.Size(645, 219);
             this.groupBox6.TabIndex = 13;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "دایرکت";
             // 
             // btnVideo
             // 
-            this.btnVideo.Location = new System.Drawing.Point(65, 175);
+            this.btnVideo.Location = new System.Drawing.Point(10, 175);
             this.btnVideo.Name = "btnVideo";
-            this.btnVideo.Size = new System.Drawing.Size(109, 38);
+            this.btnVideo.Size = new System.Drawing.Size(114, 38);
             this.btnVideo.TabIndex = 13;
             this.btnVideo.Text = "ارسال ویدئو";
             this.btnVideo.UseVisualStyleBackColor = true;
@@ -457,9 +462,9 @@
             // 
             // btnSendImage
             // 
-            this.btnSendImage.Location = new System.Drawing.Point(180, 175);
+            this.btnSendImage.Location = new System.Drawing.Point(130, 175);
             this.btnSendImage.Name = "btnSendImage";
-            this.btnSendImage.Size = new System.Drawing.Size(109, 38);
+            this.btnSendImage.Size = new System.Drawing.Size(117, 38);
             this.btnSendImage.TabIndex = 12;
             this.btnSendImage.Text = "ارسال تصویر";
             this.btnSendImage.UseVisualStyleBackColor = true;
@@ -467,9 +472,9 @@
             // 
             // btnSend
             // 
-            this.btnSend.Location = new System.Drawing.Point(295, 175);
+            this.btnSend.Location = new System.Drawing.Point(253, 175);
             this.btnSend.Name = "btnSend";
-            this.btnSend.Size = new System.Drawing.Size(75, 38);
+            this.btnSend.Size = new System.Drawing.Size(117, 38);
             this.btnSend.TabIndex = 11;
             this.btnSend.Text = "ارسال";
             this.btnSend.UseVisualStyleBackColor = true;
@@ -477,23 +482,23 @@
             // 
             // txtMessage
             // 
-            this.txtMessage.Location = new System.Drawing.Point(6, 85);
+            this.txtMessage.Location = new System.Drawing.Point(6, 81);
             this.txtMessage.Multiline = true;
             this.txtMessage.Name = "txtMessage";
-            this.txtMessage.Size = new System.Drawing.Size(364, 87);
+            this.txtMessage.Size = new System.Drawing.Size(626, 87);
             this.txtMessage.TabIndex = 8;
             // 
             // txtDirectUserName
             // 
-            this.txtDirectUserName.Location = new System.Drawing.Point(6, 51);
+            this.txtDirectUserName.Location = new System.Drawing.Point(6, 41);
             this.txtDirectUserName.Name = "txtDirectUserName";
-            this.txtDirectUserName.Size = new System.Drawing.Size(265, 28);
+            this.txtDirectUserName.Size = new System.Drawing.Size(542, 28);
             this.txtDirectUserName.TabIndex = 7;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(301, 54);
+            this.label4.Location = new System.Drawing.Point(563, 44);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(73, 21);
             this.label4.TabIndex = 6;
@@ -566,11 +571,52 @@
             this.btnStoryVideo.UseVisualStyleBackColor = true;
             this.btnStoryVideo.Click += new System.EventHandler(this.btnStoryVideo_Click);
             // 
+            // groupBox9
+            // 
+            this.groupBox9.Controls.Add(this.btnSendVideoPost);
+            this.groupBox9.Controls.Add(this.btnSendImagePost);
+            this.groupBox9.Controls.Add(this.txtCaption);
+            this.groupBox9.Location = new System.Drawing.Point(444, 736);
+            this.groupBox9.Name = "groupBox9";
+            this.groupBox9.Size = new System.Drawing.Size(645, 181);
+            this.groupBox9.TabIndex = 16;
+            this.groupBox9.TabStop = false;
+            this.groupBox9.Text = "ارسال پست جدید";
+            // 
+            // btnSendVideoPost
+            // 
+            this.btnSendVideoPost.Location = new System.Drawing.Point(10, 139);
+            this.btnSendVideoPost.Name = "btnSendVideoPost";
+            this.btnSendVideoPost.Size = new System.Drawing.Size(114, 38);
+            this.btnSendVideoPost.TabIndex = 13;
+            this.btnSendVideoPost.Text = "ارسال ویدئو";
+            this.btnSendVideoPost.UseVisualStyleBackColor = true;
+            this.btnSendVideoPost.Click += new System.EventHandler(this.btnSendVideoPost_Click);
+            // 
+            // btnSendImagePost
+            // 
+            this.btnSendImagePost.Location = new System.Drawing.Point(130, 139);
+            this.btnSendImagePost.Name = "btnSendImagePost";
+            this.btnSendImagePost.Size = new System.Drawing.Size(117, 38);
+            this.btnSendImagePost.TabIndex = 12;
+            this.btnSendImagePost.Text = "ارسال تصویر";
+            this.btnSendImagePost.UseVisualStyleBackColor = true;
+            this.btnSendImagePost.Click += new System.EventHandler(this.btnSendImagePost_Click);
+            // 
+            // txtCaption
+            // 
+            this.txtCaption.Location = new System.Drawing.Point(10, 28);
+            this.txtCaption.Multiline = true;
+            this.txtCaption.Name = "txtCaption";
+            this.txtCaption.Size = new System.Drawing.Size(622, 87);
+            this.txtCaption.TabIndex = 8;
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1105, 737);
+            this.ClientSize = new System.Drawing.Size(1107, 930);
+            this.Controls.Add(this.groupBox9);
             this.Controls.Add(this.groupBox8);
             this.Controls.Add(this.groupBox7);
             this.Controls.Add(this.groupBox6);
@@ -607,6 +653,8 @@
             this.groupBox7.PerformLayout();
             this.groupBox8.ResumeLayout(false);
             this.groupBox8.PerformLayout();
+            this.groupBox9.ResumeLayout(false);
+            this.groupBox9.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -660,6 +708,10 @@
         private System.Windows.Forms.Button btnStoryVideo;
         private System.Windows.Forms.Button btnStoryPhoto;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.GroupBox groupBox9;
+        private System.Windows.Forms.Button btnSendVideoPost;
+        private System.Windows.Forms.Button btnSendImagePost;
+        private System.Windows.Forms.TextBox txtCaption;
     }
 }
 

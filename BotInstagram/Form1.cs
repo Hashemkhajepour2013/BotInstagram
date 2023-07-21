@@ -269,5 +269,65 @@ Ctx.api.AccountProcessor.ChangeProfilePictureAsync(picByte);
                 MessageBox.Show("video sended ...");
             }
         }
+
+        private async void btnSendImagePost_Click(object sender, System.EventArgs e)
+        {
+            OpenFileDialog op = new OpenFileDialog();
+            op.ShowDialog();
+            string imagePath = op.FileName;
+
+            var media = new InstaImageUpload()
+            {
+                Height = 1080,
+                Width = 1080,
+                Uri = imagePath
+            };
+            media.UserTags.Add(new InstaUserTagUpload()
+            {
+                Username = "HashemDeveloper",
+                X = 0.5,
+                Y = 0.5
+            });
+
+            var res = await Ctx.api.MediaProcessor
+                .UploadPhotoAsync(media, txtCaption.Text);
+            if (res.Succeeded)
+            {
+                txtCaption.Text = "";
+                MessageBox.Show("Done ...");
+            }
+        }
+
+        private async void btnSendVideoPost_Click(object sender, System.EventArgs e)
+        {
+            OpenFileDialog op = new OpenFileDialog();
+            op.Title = "selectVideo";
+            op.ShowDialog();
+            string videoUri = op.FileName;
+            OpenFileDialog opImage = new OpenFileDialog();
+            opImage.Title = "Select Image";
+            opImage.Filter = "Image files (*.jpg, *.jpeg, *.jep, *.img)";
+            opImage.ShowDialog();
+            string imageUri = opImage.FileName;
+            var video = new InstaVideoUpload()
+            {
+                Video = new InstaVideo(videoUri, 0, 0),
+                VideoThumbnail = new InstaImage(imageUri, 0, 0)
+            };
+
+            video.UserTags.Add(new InstaUserTagUpload()
+            {
+                Username = "HashemDeveloper",
+                X = 0.5,
+                Y = 0.5
+            });
+
+            var res = await Ctx.api.MediaProcessor
+                .UploadVideoAsync(video, txtCaption.Text);
+            if (res.Succeeded)
+            {
+                MessageBox.Show("Done ...");
+            }
+        }
     }
 }
