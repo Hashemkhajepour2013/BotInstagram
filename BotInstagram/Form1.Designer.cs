@@ -60,6 +60,13 @@
             this.lsbBlockUser = new System.Windows.Forms.ListBox();
             this.btnBlock = new System.Windows.Forms.Button();
             this.btnUnBlock = new System.Windows.Forms.Button();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtDirectUserName = new System.Windows.Forms.TextBox();
+            this.txtMessage = new System.Windows.Forms.TextBox();
+            this.btnSend = new System.Windows.Forms.Button();
+            this.btnSendImage = new System.Windows.Forms.Button();
+            this.btnVideo = new System.Windows.Forms.Button();
             this.gbLogin.SuspendLayout();
             this.gbCommand.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -70,6 +77,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgbFollowing)).BeginInit();
             this.groupBox4.SuspendLayout();
             this.groupBox5.SuspendLayout();
+            this.groupBox6.SuspendLayout();
             this.SuspendLayout();
             // 
             // gbLogin
@@ -401,11 +409,81 @@
             this.btnUnBlock.UseVisualStyleBackColor = true;
             this.btnUnBlock.Click += new System.EventHandler(this.btnUnBlock_Click);
             // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.btnVideo);
+            this.groupBox6.Controls.Add(this.btnSendImage);
+            this.groupBox6.Controls.Add(this.btnSend);
+            this.groupBox6.Controls.Add(this.txtMessage);
+            this.groupBox6.Controls.Add(this.txtDirectUserName);
+            this.groupBox6.Controls.Add(this.label4);
+            this.groupBox6.Location = new System.Drawing.Point(700, 506);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(389, 219);
+            this.groupBox6.TabIndex = 13;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "دایرکت";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(301, 54);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(73, 21);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "نام کاربری :";
+            // 
+            // txtDirectUserName
+            // 
+            this.txtDirectUserName.Location = new System.Drawing.Point(6, 51);
+            this.txtDirectUserName.Name = "txtDirectUserName";
+            this.txtDirectUserName.Size = new System.Drawing.Size(265, 28);
+            this.txtDirectUserName.TabIndex = 7;
+            // 
+            // txtMessage
+            // 
+            this.txtMessage.Location = new System.Drawing.Point(6, 85);
+            this.txtMessage.Multiline = true;
+            this.txtMessage.Name = "txtMessage";
+            this.txtMessage.Size = new System.Drawing.Size(364, 87);
+            this.txtMessage.TabIndex = 8;
+            // 
+            // btnSend
+            // 
+            this.btnSend.Location = new System.Drawing.Point(295, 175);
+            this.btnSend.Name = "btnSend";
+            this.btnSend.Size = new System.Drawing.Size(75, 38);
+            this.btnSend.TabIndex = 11;
+            this.btnSend.Text = "ارسال";
+            this.btnSend.UseVisualStyleBackColor = true;
+            this.btnSend.Click += new System.EventHandler(this.btnSend_Click);
+            // 
+            // btnSendImage
+            // 
+            this.btnSendImage.Location = new System.Drawing.Point(180, 175);
+            this.btnSendImage.Name = "btnSendImage";
+            this.btnSendImage.Size = new System.Drawing.Size(109, 38);
+            this.btnSendImage.TabIndex = 12;
+            this.btnSendImage.Text = "ارسال تصویر";
+            this.btnSendImage.UseVisualStyleBackColor = true;
+            this.btnSendImage.Click += new System.EventHandler(this.btnSendImage_Click);
+            // 
+            // btnVideo
+            // 
+            this.btnVideo.Location = new System.Drawing.Point(65, 175);
+            this.btnVideo.Name = "btnVideo";
+            this.btnVideo.Size = new System.Drawing.Size(109, 38);
+            this.btnVideo.TabIndex = 13;
+            this.btnVideo.Text = "ارسال ویدئو";
+            this.btnVideo.UseVisualStyleBackColor = true;
+            this.btnVideo.Click += new System.EventHandler(this.btnVideo_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1105, 737);
+            this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
@@ -433,6 +511,8 @@
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.groupBox5.ResumeLayout(false);
+            this.groupBox6.ResumeLayout(false);
+            this.groupBox6.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -471,6 +551,13 @@
         private System.Windows.Forms.ListBox lsbBlockUser;
         private System.Windows.Forms.Button btnBlock;
         private System.Windows.Forms.Button btnUnBlock;
+        private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.Button btnSend;
+        private System.Windows.Forms.TextBox txtMessage;
+        private System.Windows.Forms.TextBox txtDirectUserName;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button btnSendImage;
+        private System.Windows.Forms.Button btnVideo;
     }
 }
 

@@ -2,8 +2,10 @@
 using InstagramApiSharp.API;
 using InstagramApiSharp.API.Builder;
 using InstagramApiSharp.Classes;
+using InstagramApiSharp.Classes.Models;
 using InstagramApiSharp.Logger;
 using System.IO;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace BotInstagram
@@ -147,6 +149,67 @@ Ctx.api.AccountProcessor.ChangeProfilePictureAsync(picByte);
         private void lsbBlockUser_SelectedIndexChanged(object sender, System.EventArgs e)
         {
             txtUser_Name.Text = lsbBlockUser.SelectedItem.ToString();
+        }
+
+        private async void btnSend_Click(object sender, System.EventArgs e)
+        {
+            var user = await Ctx.api.UserProcessor.GetUserAsync(txtDirectUserName.Text);
+            var direct = await Ctx.api.MessagingProcessor.SendDirectTextAsync(
+                user.Value.Pk.ToString(),
+                null,
+                txtMessage.Text);
+            if (direct.Succeeded)
+            {
+                MessageBox.Show("Sended ...");
+            }
+        }
+
+        private async void btnSendImage_Click(object sender, System.EventArgs e)
+        {
+            var inbox = await Ctx.api.MessagingProcessor.GetDirectInboxAsync(PaginationParameters.MaxPagesToLoad(1));          
+            var threadId = inbox.Value.Inbox.Threads.FirstOrDefault(_ => _.Title == txtDirectUserName.Text).ThreadId;
+            OpenFileDialog op = new OpenFileDialog();
+            op.ShowDialog();
+            var imageUp = new InstaImage()
+            {
+                Uri = op.FileName
+            };
+
+            var image = await Ctx.api.MessagingProcessor.SendDirectPhotoAsync(
+                imageUp,
+                threadId
+              );
+
+            if (image.Succeeded)
+            {
+                MessageBox.Show("Sended ...");
+            }
+        }
+
+        private async void btnVideo_Click(object sender, System.EventArgs e)
+        {
+            var inbox = await Ctx.api.MessagingProcessor.GetDirectInboxAsync(PaginationParameters.MaxPagesToLoad(1));
+            var threadId = inbox.Value.Inbox.Threads.FirstOrDefault(_ => _.Title == txtDirectUserName.Text).ThreadId;
+            OpenFileDialog op = new OpenFileDialog();
+            op.ShowDialog();
+            var videoUp = new InstaVideo()
+            {
+                Uri = op.FileName
+            };
+
+            var video = new InstaVideoUpload()
+            {
+                Video = videoUp
+            };
+
+            var directVideo = await Ctx.api.MessagingProcessor.SendDirectVideoAsync(
+                video,
+                threadId);
+
+            if (directVideo.Succeeded)
+            {
+                MessageBox.Show("Sended ...");
+            }
         }
     }
 }
