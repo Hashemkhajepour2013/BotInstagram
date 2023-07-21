@@ -117,5 +117,36 @@ Ctx.api.AccountProcessor.ChangeProfilePictureAsync(picByte);
                 btnFollowing.PerformClick();
             }
         }
+
+        private async void btnBlockedUser_Click(object sender, System.EventArgs e)
+        {
+            lsbBlockUser.Items.Clear();
+            var users = await Ctx.api.UserProcessor.GetBlockedUsersAsync(
+                PaginationParameters.MaxPagesToLoad(1));
+
+            foreach (var user in users.Value.BlockedList)
+            {
+                lsbBlockUser.Items.Add(user.UserName);
+            }
+        }
+
+        private async void btnBlock_Click(object sender, System.EventArgs e)
+        {
+            var user = await Ctx.api.UserProcessor.GetUserAsync(txtUser_Name.Text);
+            var block = Ctx.api.UserProcessor.BlockUserAsync(user.Value.Pk);
+            btnBlockedUser.PerformClick();
+        }
+
+        private async void btnUnBlock_Click(object sender, System.EventArgs e)
+        {
+            var user = await Ctx.api.UserProcessor.GetUserAsync(txtUser_Name.Text);
+            var block = Ctx.api.UserProcessor.UnBlockUserAsync(user.Value.Pk);
+            btnBlockedUser.PerformClick();
+        }
+
+        private void lsbBlockUser_SelectedIndexChanged(object sender, System.EventArgs e)
+        {
+            txtUser_Name.Text = lsbBlockUser.SelectedItem.ToString();
+        }
     }
 }

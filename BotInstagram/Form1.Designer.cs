@@ -41,19 +41,25 @@
             this.btnEditPic = new System.Windows.Forms.Button();
             this.btnDeletePic = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.btnFollowers = new System.Windows.Forms.Button();
             this.dgbFollowers = new System.Windows.Forms.DataGridView();
             this.UserName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FullName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnFollowers = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dgbFollowing = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnFollowing = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.txtUser_Name = new System.Windows.Forms.TextBox();
-            this.btnUnFollow = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             this.btnUserFollow = new System.Windows.Forms.Button();
+            this.btnUnFollow = new System.Windows.Forms.Button();
+            this.txtUser_Name = new System.Windows.Forms.TextBox();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.btnBlockedUser = new System.Windows.Forms.Button();
+            this.lsbBlockUser = new System.Windows.Forms.ListBox();
+            this.btnBlock = new System.Windows.Forms.Button();
+            this.btnUnBlock = new System.Windows.Forms.Button();
             this.gbLogin.SuspendLayout();
             this.gbCommand.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -63,6 +69,7 @@
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgbFollowing)).BeginInit();
             this.groupBox4.SuspendLayout();
+            this.groupBox5.SuspendLayout();
             this.SuspendLayout();
             // 
             // gbLogin
@@ -148,7 +155,7 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.pcImage);
-            this.groupBox1.Location = new System.Drawing.Point(619, 269);
+            this.groupBox1.Location = new System.Drawing.Point(856, 269);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(239, 143);
             this.groupBox1.TabIndex = 5;
@@ -166,7 +173,7 @@
             // 
             // btnEditPic
             // 
-            this.btnEditPic.Location = new System.Drawing.Point(777, 418);
+            this.btnEditPic.Location = new System.Drawing.Point(1014, 427);
             this.btnEditPic.Name = "btnEditPic";
             this.btnEditPic.Size = new System.Drawing.Size(75, 38);
             this.btnEditPic.TabIndex = 2;
@@ -176,7 +183,7 @@
             // 
             // btnDeletePic
             // 
-            this.btnDeletePic.Location = new System.Drawing.Point(625, 418);
+            this.btnDeletePic.Location = new System.Drawing.Point(862, 427);
             this.btnDeletePic.Name = "btnDeletePic";
             this.btnDeletePic.Size = new System.Drawing.Size(146, 38);
             this.btnDeletePic.TabIndex = 6;
@@ -194,16 +201,6 @@
             this.groupBox2.TabIndex = 7;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "دنبال کننده ها :";
-            // 
-            // btnFollowers
-            // 
-            this.btnFollowers.Location = new System.Drawing.Point(6, 412);
-            this.btnFollowers.Name = "btnFollowers";
-            this.btnFollowers.Size = new System.Drawing.Size(75, 38);
-            this.btnFollowers.TabIndex = 9;
-            this.btnFollowers.Text = "نمایش";
-            this.btnFollowers.UseVisualStyleBackColor = true;
-            this.btnFollowers.Click += new System.EventHandler(this.btnFollowers_Click);
             // 
             // dgbFollowers
             // 
@@ -237,6 +234,16 @@
             this.FullName.Name = "FullName";
             this.FullName.ReadOnly = true;
             this.FullName.Width = 55;
+            // 
+            // btnFollowers
+            // 
+            this.btnFollowers.Location = new System.Drawing.Point(6, 412);
+            this.btnFollowers.Name = "btnFollowers";
+            this.btnFollowers.Size = new System.Drawing.Size(75, 38);
+            this.btnFollowers.TabIndex = 9;
+            this.btnFollowers.Text = "نمایش";
+            this.btnFollowers.UseVisualStyleBackColor = true;
+            this.btnFollowers.Click += new System.EventHandler(this.btnFollowers_Click);
             // 
             // groupBox3
             // 
@@ -294,6 +301,9 @@
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.btnBlock);
+            this.groupBox4.Controls.Add(this.btnUnBlock);
+            this.groupBox4.Controls.Add(this.label3);
             this.groupBox4.Controls.Add(this.btnUserFollow);
             this.groupBox4.Controls.Add(this.btnUnFollow);
             this.groupBox4.Controls.Add(this.txtUser_Name);
@@ -304,22 +314,14 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "مدیریت کاربران پیچ :";
             // 
-            // txtUser_Name
+            // label3
             // 
-            this.txtUser_Name.Location = new System.Drawing.Point(6, 68);
-            this.txtUser_Name.Name = "txtUser_Name";
-            this.txtUser_Name.Size = new System.Drawing.Size(194, 28);
-            this.txtUser_Name.TabIndex = 2;
-            // 
-            // btnUnFollow
-            // 
-            this.btnUnFollow.Location = new System.Drawing.Point(19, 107);
-            this.btnUnFollow.Name = "btnUnFollow";
-            this.btnUnFollow.Size = new System.Drawing.Size(75, 38);
-            this.btnUnFollow.TabIndex = 3;
-            this.btnUnFollow.Text = "UnFollow";
-            this.btnUnFollow.UseVisualStyleBackColor = true;
-            this.btnUnFollow.Click += new System.EventHandler(this.btnUnFollow_Click);
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(128, 36);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(76, 21);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Username :";
             // 
             // btnUserFollow
             // 
@@ -331,11 +333,80 @@
             this.btnUserFollow.UseVisualStyleBackColor = true;
             this.btnUserFollow.Click += new System.EventHandler(this.btnUserFollow_Click);
             // 
+            // btnUnFollow
+            // 
+            this.btnUnFollow.Location = new System.Drawing.Point(19, 107);
+            this.btnUnFollow.Name = "btnUnFollow";
+            this.btnUnFollow.Size = new System.Drawing.Size(75, 38);
+            this.btnUnFollow.TabIndex = 3;
+            this.btnUnFollow.Text = "UnFollow";
+            this.btnUnFollow.UseVisualStyleBackColor = true;
+            this.btnUnFollow.Click += new System.EventHandler(this.btnUnFollow_Click);
+            // 
+            // txtUser_Name
+            // 
+            this.txtUser_Name.Location = new System.Drawing.Point(6, 68);
+            this.txtUser_Name.Name = "txtUser_Name";
+            this.txtUser_Name.Size = new System.Drawing.Size(194, 28);
+            this.txtUser_Name.TabIndex = 2;
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.btnBlockedUser);
+            this.groupBox5.Controls.Add(this.lsbBlockUser);
+            this.groupBox5.Location = new System.Drawing.Point(461, 269);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(208, 456);
+            this.groupBox5.TabIndex = 12;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "نمایش کاربران بلاک شده :";
+            // 
+            // btnBlockedUser
+            // 
+            this.btnBlockedUser.Location = new System.Drawing.Point(6, 418);
+            this.btnBlockedUser.Name = "btnBlockedUser";
+            this.btnBlockedUser.Size = new System.Drawing.Size(75, 38);
+            this.btnBlockedUser.TabIndex = 10;
+            this.btnBlockedUser.Text = "نمایش";
+            this.btnBlockedUser.UseVisualStyleBackColor = true;
+            this.btnBlockedUser.Click += new System.EventHandler(this.btnBlockedUser_Click);
+            // 
+            // lsbBlockUser
+            // 
+            this.lsbBlockUser.FormattingEnabled = true;
+            this.lsbBlockUser.ItemHeight = 21;
+            this.lsbBlockUser.Location = new System.Drawing.Point(6, 27);
+            this.lsbBlockUser.Name = "lsbBlockUser";
+            this.lsbBlockUser.Size = new System.Drawing.Size(189, 382);
+            this.lsbBlockUser.TabIndex = 0;
+            this.lsbBlockUser.SelectedIndexChanged += new System.EventHandler(this.lsbBlockUser_SelectedIndexChanged);
+            // 
+            // btnBlock
+            // 
+            this.btnBlock.Location = new System.Drawing.Point(115, 162);
+            this.btnBlock.Name = "btnBlock";
+            this.btnBlock.Size = new System.Drawing.Size(75, 38);
+            this.btnBlock.TabIndex = 7;
+            this.btnBlock.Text = "Block";
+            this.btnBlock.UseVisualStyleBackColor = true;
+            this.btnBlock.Click += new System.EventHandler(this.btnBlock_Click);
+            // 
+            // btnUnBlock
+            // 
+            this.btnUnBlock.Location = new System.Drawing.Point(19, 162);
+            this.btnUnBlock.Name = "btnUnBlock";
+            this.btnUnBlock.Size = new System.Drawing.Size(75, 38);
+            this.btnUnBlock.TabIndex = 6;
+            this.btnUnBlock.Text = "UnBlock";
+            this.btnUnBlock.UseVisualStyleBackColor = true;
+            this.btnUnBlock.Click += new System.EventHandler(this.btnUnBlock_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1107, 737);
+            this.ClientSize = new System.Drawing.Size(1105, 737);
+            this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
@@ -361,6 +432,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgbFollowing)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            this.groupBox5.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -393,6 +465,12 @@
         private System.Windows.Forms.Button btnUserFollow;
         private System.Windows.Forms.Button btnUnFollow;
         private System.Windows.Forms.TextBox txtUser_Name;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.Button btnBlockedUser;
+        private System.Windows.Forms.ListBox lsbBlockUser;
+        private System.Windows.Forms.Button btnBlock;
+        private System.Windows.Forms.Button btnUnBlock;
     }
 }
 
