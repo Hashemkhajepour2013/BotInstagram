@@ -211,5 +211,10 @@ Ctx.api.AccountProcessor.ChangeProfilePictureAsync(picByte);
                 MessageBox.Show("Sended ...");
             }
         }
+
+        private void btnActivity_Click(object sender, System.EventArgs e)
+        {
+            (new frmActivity()).ShowDialog();
+        }
     }
 }

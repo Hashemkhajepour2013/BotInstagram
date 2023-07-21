@@ -67,6 +67,7 @@
             this.btnSend = new System.Windows.Forms.Button();
             this.btnSendImage = new System.Windows.Forms.Button();
             this.btnVideo = new System.Windows.Forms.Button();
+            this.btnActivity = new System.Windows.Forms.Button();
             this.gbLogin.SuspendLayout();
             this.gbCommand.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -141,6 +142,7 @@
             // 
             // gbCommand
             // 
+            this.gbCommand.Controls.Add(this.btnActivity);
             this.gbCommand.Controls.Add(this.btnEditProfile);
             this.gbCommand.Enabled = false;
             this.gbCommand.Location = new System.Drawing.Point(512, 13);
@@ -478,6 +480,16 @@
             this.btnVideo.UseVisualStyleBackColor = true;
             this.btnVideo.Click += new System.EventHandler(this.btnVideo_Click);
             // 
+            // btnActivity
+            // 
+            this.btnActivity.Location = new System.Drawing.Point(295, 27);
+            this.btnActivity.Name = "btnActivity";
+            this.btnActivity.Size = new System.Drawing.Size(123, 38);
+            this.btnActivity.TabIndex = 5;
+            this.btnActivity.Text = "رخ دادهای اخیر";
+            this.btnActivity.UseVisualStyleBackColor = true;
+            this.btnActivity.Click += new System.EventHandler(this.btnActivity_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 21F);
@@ -558,6 +570,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnSendImage;
         private System.Windows.Forms.Button btnVideo;
+        private System.Windows.Forms.Button btnActivity;
     }
 }
 
