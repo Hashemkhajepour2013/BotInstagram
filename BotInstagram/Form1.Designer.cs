@@ -68,6 +68,9 @@
             this.btnSendImage = new System.Windows.Forms.Button();
             this.btnVideo = new System.Windows.Forms.Button();
             this.btnActivity = new System.Windows.Forms.Button();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.txtUserNameForPost = new System.Windows.Forms.TextBox();
+            this.btnShowPost = new System.Windows.Forms.Button();
             this.gbLogin.SuspendLayout();
             this.gbCommand.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -79,6 +82,7 @@
             this.groupBox4.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox6.SuspendLayout();
+            this.groupBox7.SuspendLayout();
             this.SuspendLayout();
             // 
             // gbLogin
@@ -145,16 +149,16 @@
             this.gbCommand.Controls.Add(this.btnActivity);
             this.gbCommand.Controls.Add(this.btnEditProfile);
             this.gbCommand.Enabled = false;
-            this.gbCommand.Location = new System.Drawing.Point(512, 13);
+            this.gbCommand.Location = new System.Drawing.Point(780, 13);
             this.gbCommand.Name = "gbCommand";
-            this.gbCommand.Size = new System.Drawing.Size(583, 238);
+            this.gbCommand.Size = new System.Drawing.Size(315, 238);
             this.gbCommand.TabIndex = 1;
             this.gbCommand.TabStop = false;
             this.gbCommand.Text = " دستورات :";
             // 
             // btnEditProfile
             // 
-            this.btnEditProfile.Location = new System.Drawing.Point(438, 27);
+            this.btnEditProfile.Location = new System.Drawing.Point(173, 27);
             this.btnEditProfile.Name = "btnEditProfile";
             this.btnEditProfile.Size = new System.Drawing.Size(123, 38);
             this.btnEditProfile.TabIndex = 4;
@@ -482,7 +486,7 @@
             // 
             // btnActivity
             // 
-            this.btnActivity.Location = new System.Drawing.Point(295, 27);
+            this.btnActivity.Location = new System.Drawing.Point(44, 27);
             this.btnActivity.Name = "btnActivity";
             this.btnActivity.Size = new System.Drawing.Size(123, 38);
             this.btnActivity.TabIndex = 5;
@@ -490,11 +494,40 @@
             this.btnActivity.UseVisualStyleBackColor = true;
             this.btnActivity.Click += new System.EventHandler(this.btnActivity_Click);
             // 
+            // groupBox7
+            // 
+            this.groupBox7.Controls.Add(this.btnShowPost);
+            this.groupBox7.Controls.Add(this.txtUserNameForPost);
+            this.groupBox7.Location = new System.Drawing.Point(512, 13);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(262, 96);
+            this.groupBox7.TabIndex = 14;
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Text = "نمایش پست ها :";
+            // 
+            // txtUserNameForPost
+            // 
+            this.txtUserNameForPost.Location = new System.Drawing.Point(87, 27);
+            this.txtUserNameForPost.Name = "txtUserNameForPost";
+            this.txtUserNameForPost.Size = new System.Drawing.Size(169, 28);
+            this.txtUserNameForPost.TabIndex = 3;
+            // 
+            // btnShowPost
+            // 
+            this.btnShowPost.Location = new System.Drawing.Point(6, 27);
+            this.btnShowPost.Name = "btnShowPost";
+            this.btnShowPost.Size = new System.Drawing.Size(75, 30);
+            this.btnShowPost.TabIndex = 5;
+            this.btnShowPost.Text = "Show";
+            this.btnShowPost.UseVisualStyleBackColor = true;
+            this.btnShowPost.Click += new System.EventHandler(this.btnShowPost_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1105, 737);
+            this.Controls.Add(this.groupBox7);
             this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox4);
@@ -525,6 +558,8 @@
             this.groupBox5.ResumeLayout(false);
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
+            this.groupBox7.ResumeLayout(false);
+            this.groupBox7.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -571,6 +606,9 @@
         private System.Windows.Forms.Button btnSendImage;
         private System.Windows.Forms.Button btnVideo;
         private System.Windows.Forms.Button btnActivity;
+        private System.Windows.Forms.GroupBox groupBox7;
+        private System.Windows.Forms.Button btnShowPost;
+        private System.Windows.Forms.TextBox txtUserNameForPost;
     }
 }
 

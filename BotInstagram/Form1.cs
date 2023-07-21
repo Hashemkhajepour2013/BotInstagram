@@ -216,5 +216,15 @@ Ctx.api.AccountProcessor.ChangeProfilePictureAsync(picByte);
         {
             (new frmActivity()).ShowDialog();
         }
+
+        private void btnShowPost_Click(object sender, System.EventArgs e)
+        {
+            frmShowPost frm = new frmShowPost()
+            {
+                UserName = txtUserNameForPost.Text.Trim()
+            };
+
+            frm.ShowDialog();
+        }
     }
 }
